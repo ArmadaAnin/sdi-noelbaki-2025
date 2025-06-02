@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelulusan SDI Noelbaki 2024/2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-800 text-white p-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <img src="https://freeimghost.net/images/2025/06/01/logo-sekolahc578bbb0f5df56bf.jpeg" alt="Logo Sekolah" class="h-16 w-16 rounded-full">
+      <div>
+        <h1 class="text-2xl font-bold">Pengumuman Kelulusan</h1>
+        <p class="text-sm">UPTD SDI Noelbaki Tahun Pelajaran 2024/2025</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sambutan Kepala Sekolah -->
+  <section class="max-w-4xl mx-auto my-8 p-6a bg-white rounded-xl shadow">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+      <img src="https://freeimghost.net/images/2025/06/01/WhatsApp-Image-2025-06-02-at-07.46.01.jpeg" alt="Kepala Sekolah" class="w-40 h-52 object-cover rounded-lg shadow">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Sambutan Kepala Sekolah - Ibu Novi Adriana Riwu, M.Pd</h2>
+        <p class="text-justify text-sm leading-relaxed">
+          Assalamu’alaikum warahmatullahi wabarakatuh,<br/>
+          Salam sejahtera bagi kita semua,<br/><br/>
+          Yang terhormat Bapak/Ibu guru, orang tua/wali siswa, dan anak-anak kelas 6 yang saya banggakan,
+          Hari ini adalah hari yang sangat istimewa. Setelah enam tahun menempuh pendidikan di UPTD SDI Noelbaki, tiba saatnya kalian berdiri di ambang gerbang masa depan.
+          <br/><br/>
+          Anak-anak yang hebat, kelulusan ini bukanlah akhir, melainkan awal dari perjalanan baru. Jadikan ilmu, nilai, dan karakter yang kalian dapatkan di sekolah ini sebagai bekal untuk melangkah lebih jauh.
+          Dunia di luar sana luas dan penuh tantangan, tetapi saya yakin kalian mampu menghadapinya dengan semangat, kejujuran, dan kerja keras.
+          <br/><br/>
+          Ingatlah selalu pesan kami: jadilah generasi emas, pelajar yang cerdas, rendah hati, dan membawa perubahan positif di manapun kalian berada.
+          <br/><br/>
+          Terima kasih kepada para guru yang telah tulus mendidik, serta kepada orang tua yang selalu mendampingi. Mari kita doakan, semoga anak-anak kita terus bersinar dan sukses di jenjang berikutnya.
+          <br/><br/>
+          Selamat dan sukses, anak-anak hebat SDI Noelbaki! Teruslah melangkah dan jangan pernah berhenti bermimpi.
+          <br/><br/>
+          Wassalamu’alaikum warahmatullahi wabarakatuh.<br/>
+          Tuhan memberkati.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Pencarian -->
+  <section class="max-w-2xl mx-auto my-8 p-6 bg-white rounded-xl shadow">
+    <h3 class="text-lg font-bold mb-4">Cari Data Kelulusan Berdasarkan NISN</h3>
+    <input id="nisnInput" type="text" placeholder="Masukkan NISN" class="w-full border border-gray-300 p-2 rounded mb-4" />
+    <button onclick="cariData()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Cari</button>
+
+    <div id="hasil" class="mt-6 hidden">
+      <table class="w-full text-sm border border-gray-300">
+        <thead class="bg-blue-100">
+          <tr>
+            <th class="border p-2">NIS</th>
+            <th class="border p-2">NISN</th>
+            <th class="border p-2">Nama</th>
+            <th class="border p-2">Jenis Kelamin</th>
+            <th class="border p-2">TTL</th>
+            <th class="border p-2">Keterangan</th>
+            <th class="border p-2">Link</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script>
+    const dataKelulusan = [
+      {
+        nis: "3838",
+        nisn: "3128334380",
+        nama: "ALLVARO GAVRIEL TAGI HUMA",
+        jk: "L",
+        ttl: "KUPANG, 02-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1mbo4twTuQ-f7R_wvd62imnSSPDiiItW3/view?usp=sharing"
+      },
+      {
+        nis: "3832",
+        nisn: "132047704",
+        nama: "ANGGAIN D. SYUKUR SHAHIB",
+        jk: "L",
+        ttl: "NOELBAKI, 14-08-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1AiTF7kyHj_ShLpDRLdli-6DOX0tvO1ka/view?usp=drive_link"
+      },
+      // Tambahkan data lainnya di sini
+    ];
+
+    function cariData() {
+      const nisn = document.getElementById("nisnInput").value.trim();
+      const hasil = dataKelulusan.find(s => s.nisn === nisn);
+      const hasilDiv = document.getElementById("hasil");
+      const tbody = document.getElementById("dataTable");
+
+      tbody.innerHTML = "";
+      if (hasil) {
+        const row = `
+          <tr>
+            <td class="border p-2">${hasil.nis}</td>
+            <td class="border p-2">${hasil.nisn}</td>
+            <td class="border p-2">${hasil.nama}</td>
+            <td class="border p-2">${hasil.jk}</td>
+            <td class="border p-2">${hasil.ttl}</td>
+            <td class="border p-2">${hasil.keterangan}</td>
+            <td class="border p-2"><a href="${hasil.link}" class="text-blue-600 underline" target="_blank">Lihat</a></td>
+          </tr>
+        `;
+        tbody.innerHTML = row;
+        hasilDiv.classList.remove("hidden");
+      } else {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center p-4">Data tidak ditemukan</td></tr>`;
+        hasilDiv.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
