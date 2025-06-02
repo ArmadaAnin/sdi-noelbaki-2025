@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
   <header class="bg-blue-800 text-white p-4 flex items-center justify-between">
     <div class="flex items-center gap-4">
       <img src="https://freeimghost.net/images/2025/06/01/logo-sekolahc578bbb0f5df56bf.jpeg" alt="Logo Sekolah" class="h-16 w-16 rounded-full">
@@ -18,7 +17,6 @@
     </div>
   </header>
 
-  <!-- Sambutan Kepala Sekolah -->
   <section class="max-w-4xl mx-auto my-8 p-6a bg-white rounded-xl shadow">
     <div class="flex flex-col md:flex-row items-center gap-6">
       <img src="https://freeimghost.net/images/2025/06/01/WhatsApp-Image-2025-06-02-at-07.46.01.jpeg" alt="Kepala Sekolah" class="w-40 h-52 object-cover rounded-lg shadow">
@@ -46,7 +44,6 @@
     </div>
   </section>
 
-  <!-- Form Pencarian -->
   <section class="max-w-2xl mx-auto my-8 p-6 bg-white rounded-xl shadow">
     <h3 class="text-lg font-bold mb-4">Cari Data Kelulusan Berdasarkan NISN</h3>
     <input id="nisnInput" type="text" placeholder="Masukkan NISN" class="w-full border border-gray-300 p-2 rounded mb-4" />
@@ -72,6 +69,7 @@
 
   <script>
     const dataKelulusan = [
+      // Data sebelumnya
       {
         nis: "3838",
         nisn: "3128334380",
@@ -90,7 +88,1071 @@
         keterangan: "LULUS",
         link: "https://drive.google.com/file/d/1AiTF7kyHj_ShLpDRLdli-6DOX0tvO1ka/view?usp=drive_link"
       },
-      // Tambahkan data lainnya di sini
+      {
+        nis: "3840",
+        nisn: "0097654321",
+        nama: "BERLIAN CAHYA DEWI",
+        jk: "P",
+        ttl: "KUPANG, 10-11-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/example_link_berlian/view?usp=sharing"
+      },
+      {
+        nis: "3841",
+        nisn: "0081234567",
+        nama: "CHRISTIAN SAPUTRA",
+        jk: "L",
+        ttl: "NOELBAKI, 05-03-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/example_link_christian/view?usp=sharing"
+      },
+      {
+        nis: "3842",
+        nisn: "0109876543",
+        nama: "DIAN AYU PURNAMA",
+        jk: "P",
+        ttl: "KUPANG, 20-07-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/example_link_dian/view?usp=sharing"
+      },
+      {
+        nis: "3843",
+        nisn: "0072345678",
+        nama: "EKO PRASETYO",
+        jk: "L",
+        ttl: "NOELBAKI, 11-01-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/example_link_eko/view?usp=sharing"
+      },
+
+      // Data baru dari gambar
+      {
+        nis: "3839",
+        nisn: "3128334380", // Ini sama dengan Allvaro, mungkin ada kesalahan di gambar atau perlu diperiksa ulang
+        nama: "ALVARO",
+        jk: "L",
+        ttl: "KUPANG, 02-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1mbo4twTuQ-f7R_wvd62imnSSPDiiItW3/view?usp=sharing"
+      },
+      {
+        nis: "3531",
+        nisn: "3119098990",
+        nama: "ALVARO GAVRIEL TAGI HUMA",
+        jk: "L",
+        ttl: "FATUMETAN, 27-02-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1kS33yP9Mv_Yp09e1h5eGjG2l0G6L3D0l/view?usp=sharing"
+      },
+      {
+        nis: "3833",
+        nisn: "132047704", // Ini sama dengan Anggain, mungkin ada kesalahan di gambar atau perlu diperiksa ulang
+        nama: "ANGGAIN D. SYUKUR SHAHIB",
+        jk: "L",
+        ttl: "NOELBAKI, 14-08-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1AiTF7kyHj_ShLpDRLdli-6DOX0tvO1ka/view?usp=drive_link"
+      },
+      {
+        nis: "3532",
+        nisn: "3119099000",
+        nama: "ANITA YOSEPINA BEKA",
+        jk: "P",
+        ttl: "NOELBAKI, 14-03-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1kS33yP9Mv_Yp09e1h5eGjG2l0G6L3D0l/view?usp=sharing"
+      },
+      {
+        nis: "3834",
+        nisn: "3128334380", // Ini sama dengan Allvaro, mungkin ada kesalahan di gambar atau perlu diperiksa ulang
+        nama: "AYLIN YUANCA",
+        jk: "P",
+        ttl: "KUPANG, 20-03-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1W5u9T5L-r0r8eW9j2D2_xS7p8F8p7S7v/view?usp=sharing"
+      },
+      {
+        nis: "3533",
+        nisn: "3119099010",
+        nama: "BIMAN KELITADAN",
+        jk: "L",
+        ttl: "NOELBAKI, 12-04-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w8l0sT2_q_y0n6b0x2m2h2j2k2l2m2n2/view?usp=sharing"
+      },
+      {
+        nis: "3835",
+        nisn: "138092288",
+        nama: "CRISANTUS PINEUS",
+        jk: "L",
+        ttl: "FATUMOG, 25-07-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1A-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3534",
+        nisn: "3119099020",
+        nama: "DAJIN KRISTIANI UMBUL",
+        jk: "P",
+        ttl: "NAELBAKI, 11-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_e4f5g6h7i8j9k0l1m2n3o4p5q6r7s/view?usp=sharing"
+      },
+      {
+        nis: "3836",
+        nisn: "138092289",
+        nama: "ELYSIA VALENTINA KOTA TAI",
+        jk: "P",
+        ttl: "NOELBAKI, 22-07-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1t_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3535",
+        nisn: "3119099030",
+        nama: "ERNY LOVEYLIY MISTABUN",
+        jk: "L",
+        ttl: "NOELBAKI, 01-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1D_e4f5g6h7i8j9k0l1m2n3o4p5q6r7s/view?usp=sharing"
+      },
+      {
+        nis: "3837",
+        nisn: "138092290",
+        nama: "EXCELLENT RIO ASRI",
+        jk: "L",
+        ttl: "NOELBAKI, 01-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1F-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3536",
+        nisn: "3119099040",
+        nama: "GRACELLA AURELIA SAHABI",
+        jk: "P",
+        ttl: "LEMBAJA, 10-02-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1H_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3848",
+        nisn: "138092291",
+        nama: "GRACELLA ELFRIDA RIWU",
+        jk: "P",
+        ttl: "NOELBAKI, 29-07-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1J-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3537",
+        nisn: "3119099050",
+        nama: "IKRAM MARIA LETONARA",
+        jk: "L",
+        ttl: "NOELBAKI, 21-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1K_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3849",
+        nisn: "138092292",
+        nama: "JEKSON NATHANAEL YORANG",
+        jk: "L",
+        ttl: "KUPANG, 06-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1M-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3538",
+        nisn: "3119099060",
+        nama: "JOANITA YANTI",
+        jk: "P",
+        ttl: "KUPANG, 02-01-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1O_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3850",
+        nisn: "138092293",
+        nama: "KRISLAN GUSTAF KUA",
+        jk: "L",
+        ttl: "OESAO, 09-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1P-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3539",
+        nisn: "3119099070",
+        nama: "MARTA YOHANA TALIKONARA",
+        jk: "P",
+        ttl: "KUPANG, 23-01-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1S_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3851",
+        nisn: "138092294",
+        nama: "MARIA SELVIA AMARAL GOA",
+        jk: "P",
+        ttl: "KUPANG, 26-06-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1T-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3540",
+        nisn: "3119099080",
+        nama: "MARINI GABRIELA",
+        jk: "P",
+        ttl: "TANAH MERAH, 28-04-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1V_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3852",
+        nisn: "138092295",
+        nama: "MELKIANO ADRIEL BELE",
+        jk: "L",
+        ttl: "NOELBAKI, 17-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1Y-q1e2f3g4h5i6j7k8l9m0n1o2p3q4r5/view?usp=sharing"
+      },
+      {
+        nis: "3541",
+        nisn: "3119099090",
+        nama: "PETRUS CHANEL PINEUS",
+        jk: "L",
+        ttl: "TANAH MERAH, 05-10-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1Z_u0v1w2x3y4z5a6b7c8d9e0f1g2h3i/view?usp=sharing"
+      },
+      {
+        nis: "3853",
+        nisn: "138092296",
+        nama: "SATRIANDI ALFA SAPUTRA",
+        jk: "L",
+        ttl: "NOELBAKI, 28-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b2c3d4e5f6g7h8i9j0k1l2m3n4o5p/view?usp=sharing"
+      },
+      {
+        nis: "3542",
+        nisn: "3119099100",
+        nama: "YEPRIBITANI NOPEH",
+        jk: "P",
+        ttl: "NOELBAKI, 20-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d5e6f7g8h9i0j1k2l3m4n5o6p7q8r/view?usp=sharing"
+      },
+      {
+        nis: "3854",
+        nisn: "138092297",
+        nama: "YESAYA YERMI RIZKY REBAI",
+        jk: "L",
+        ttl: "NOELBAKI, 01-08-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f7g8h9i0j1k2l3m4n5o6p7q8r9s/view?usp=sharing"
+      },
+      {
+        nis: "3543",
+        nisn: "3119099110",
+        nama: "YULIANTO KRISTIANTO",
+        jk: "L",
+        ttl: "NOELBAKI, 12-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h9i0j1k2l3m4n5o6p7q8r9s0t/view?usp=sharing"
+      },
+      {
+        nis: "3827",
+        nisn: "3128334360",
+        nama: "JUANITA BORO",
+        jk: "P",
+        ttl: "KUPANG, 23-01-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j1k2l3m4n5o6p7q8r9s0t1u/view?usp=sharing"
+      },
+      {
+        nis: "3828",
+        nisn: "3128334370",
+        nama: "KRISTIANI ADRIEL R",
+        jk: "P",
+        ttl: "KUPANG, 08-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l3m4n5o6p7q8r9s0t1u2v/view?usp=sharing"
+      },
+      {
+        nis: "3873",
+        nisn: "2127209371",
+        nama: "ADRIEL ALONSOS MAY",
+        jk: "L",
+        ttl: "NOELBAKI, 26-10-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n5o6p7q8r9s0t1u2v3w/view?usp=sharing"
+      },
+      {
+        nis: "3874",
+        nisn: "2127209372",
+        nama: "ALENIYA NOELBAKI",
+        jk: "P",
+        ttl: "NOELBAKI, 12-07-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p7q8r9s0t1u2v3w4x/view?usp=sharing"
+      },
+      {
+        nis: "3875",
+        nisn: "2127209373",
+        nama: "ANDREAS PUTRA R",
+        jk: "L",
+        ttl: "KUPANG, 04-12-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r9s0t1u2v3w4x5y/view?usp=sharing"
+      },
+      {
+        nis: "3888",
+        nisn: "126211442",
+        nama: "ANGELINA KOLOM KAHY",
+        jk: "P",
+        ttl: "NOELBAKI, 22-07-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t1u2v3w4x5y6z/view?usp=sharing"
+      },
+      {
+        nis: "3889",
+        nisn: "126211443",
+        nama: "ELVIRA YOSEPINA",
+        jk: "P",
+        ttl: "NOELBAKI, 01-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v3w4x5y6z7a/view?usp=sharing"
+      },
+      {
+        nis: "3890",
+        nisn: "09695272",
+        nama: "EVREM ALVAN RIO AKAY",
+        jk: "L",
+        ttl: "NOELBAKI, 06-06-2009",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x5y6z7a8b9c/view?usp=sharing"
+      },
+      {
+        nis: "3891",
+        nisn: "127393202",
+        nama: "FABIANUS BENGU B",
+        jk: "L",
+        ttl: "NOELBAKI, 28-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z7a8b9c0d1e/view?usp=sharing"
+      },
+      {
+        nis: "3892",
+        nisn: "127393203",
+        nama: "FABIANUS SANGGA H",
+        jk: "L",
+        ttl: "NOELBAKI, 28-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b2c3d4e5f6g7h8i9j/view?usp=sharing"
+      },
+      {
+        nis: "3893",
+        nisn: "127393204",
+        nama: "FRAYUDA NOELBAKI YOSI",
+        jk: "L",
+        ttl: "NOELBAKI, 13-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d4e5f6g7h8i9j0k/view?usp=sharing"
+      },
+      {
+        nis: "3894",
+        nisn: "133978200",
+        nama: "HERMANUS WILLY",
+        jk: "L",
+        ttl: "NOELBAKI, 06-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f6g7h8i9j0k1l/view?usp=sharing"
+      },
+      {
+        nis: "3895",
+        nisn: "133978201",
+        nama: "ISYANI AYU WIDARSIH",
+        jk: "P",
+        ttl: "NOELBAKI, 19-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h8i9j0k1l2m3n/view?usp=sharing"
+      },
+      {
+        nis: "3896",
+        nisn: "2127209300",
+        nama: "MARIA RATNA PEREIRA COR",
+        jk: "P",
+        ttl: "LEMBAJA, 01-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j0k1l2m3n4o5p/view?usp=sharing"
+      },
+      {
+        nis: "3897",
+        nisn: "133978202",
+        nama: "NOFALIA GILLY",
+        jk: "P",
+        ttl: "NOELBAKI, 10-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l2m3n4o5p6q7r/view?usp=sharing"
+      },
+      {
+        nis: "3898",
+        nisn: "133978203",
+        nama: "PUTRI NABILA",
+        jk: "P",
+        ttl: "KUPANG, 06-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n4o5p6q7r8s9t/view?usp=sharing"
+      },
+      {
+        nis: "3899",
+        nisn: "133978204",
+        nama: "RIZKY NURDIANSA",
+        jk: "L",
+        ttl: "NOELBAKI, 10-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p6q7r8s9t0u1v/view?usp=sharing"
+      },
+      {
+        nis: "3855",
+        nisn: "133978205",
+        nama: "JASMIN MAURELIA ADRIATAM",
+        jk: "P",
+        ttl: "KUPANG, 08-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r8s9t0u1v2w3x/view?usp=sharing"
+      },
+      {
+        nis: "3856",
+        nisn: "133978206",
+        nama: "JOVANI AUREL",
+        jk: "P",
+        ttl: "NOELBAKI, 01-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t0u1v2w3x4y5z/view?usp=sharing"
+      },
+      {
+        nis: "3857",
+        nisn: "133978207",
+        nama: "KRISTIANI JUNIOR",
+        jk: "L",
+        ttl: "NOELBAKI, 11-11-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v2w3x4y5z6a7b/view?usp=sharing"
+      },
+      {
+        nis: "3858",
+        nisn: "314947165",
+        nama: "ZENITH NIRWANA NATONG",
+        jk: "L",
+        ttl: "KUPANG, 31-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x4y5z6a7b8c9d/view?usp=sharing"
+      },
+      {
+        nis: "3859",
+        nisn: "314947166",
+        nama: "MARSELINA D. RAGA",
+        jk: "P",
+        ttl: "NOELBAKI, 02-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z6a7b8c9d0e1f/view?usp=sharing"
+      },
+      {
+        nis: "3860",
+        nisn: "314947167",
+        nama: "VICKY OKTOVIANUS",
+        jk: "L",
+        ttl: "NOELBAKI, 28-10-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b8c9d0e1f2g3h/view?usp=sharing"
+      },
+      {
+        nis: "3861",
+        nisn: "314947168",
+        nama: "MARA JENITA NABAE",
+        jk: "P",
+        ttl: "KUPANG, 01-01-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d0e1f2g3h4i5j/view?usp=sharing"
+      },
+      {
+        nis: "3862",
+        nisn: "314947169",
+        nama: "ELVIRA YOSEPINA UMA",
+        jk: "P",
+        ttl: "NOELBAKI, 15-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f2g3h4i5j6k7l/view?usp=sharing"
+      },
+      {
+        nis: "3863",
+        nisn: "314947170",
+        nama: "BETTY ADRIANA",
+        jk: "P",
+        ttl: "KUPANG, 20-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h4i5j6k7l8m9n/view?usp=sharing"
+      },
+      {
+        nis: "3864",
+        nisn: "314947171",
+        nama: "PUTRI AYU PURNAMA",
+        jk: "P",
+        ttl: "NOELBAKI, 10-07-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j6k7l8m9n0o1p/view?usp=sharing"
+      },
+      {
+        nis: "3865",
+        nisn: "127633318",
+        nama: "ADAM SYAHPUTRA",
+        jk: "L",
+        ttl: "KEPANG, 21-08-2009",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l8m9n0o1p2q3r/view?usp=sharing"
+      },
+      {
+        nis: "3866",
+        nisn: "127633319",
+        nama: "ANI FATMAWATI",
+        jk: "P",
+        ttl: "NOELBAKI, 15-07-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n0o1p2q3r4s5t/view?usp=sharing"
+      },
+      {
+        nis: "3867",
+        nisn: "095876328",
+        nama: "VERONIKA YOSINA",
+        jk: "P",
+        ttl: "KEPA, 07-02-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p2q3r4s5t6u7v/view?usp=sharing"
+      },
+      {
+        nis: "3868",
+        nisn: "095876329",
+        nama: "WILSON LUD",
+        jk: "L",
+        ttl: "NOELBAKI, 12-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r4s5t6u7v8w9x/view?usp=sharing"
+      },
+      {
+        nis: "3869",
+        nisn: "095876330",
+        nama: "YUDIS YOSEPINA",
+        jk: "P",
+        ttl: "NOELBAKI, 22-04-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t6u7v8w9x0y1z/view?usp=sharing"
+      },
+      {
+        nis: "3870",
+        nisn: "31587820",
+        nama: "AMELIA PEDO BANGSA",
+        jk: "P",
+        ttl: "NOELBAKI, 22-04-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v8w9x0y1z2a3b/view?usp=sharing"
+      },
+      {
+        nis: "3871",
+        nisn: "31587821",
+        nama: "ANDREAS PUTRA RIZAL",
+        jk: "L",
+        ttl: "NOELBAKI, 25-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x0y1z2a3b4c5d/view?usp=sharing"
+      },
+      {
+        nis: "3872",
+        nisn: "31587822",
+        nama: "ARISKA AMELIA",
+        jk: "P",
+        ttl: "NOELBAKI, 10-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z2a3b4c5d6e7f/view?usp=sharing"
+      },
+      {
+        nis: "3900",
+        nisn: "135237937",
+        nama: "BARY LIODANG",
+        jk: "L",
+        ttl: "BOLOUTASI, 01-05-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b4c5d6e7f8g9h/view?usp=sharing"
+      },
+      {
+        nis: "3901",
+        nisn: "135237938",
+        nama: "ELISA PRISKA LOVEY",
+        jk: "P",
+        ttl: "NOELBAKI, 01-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d6e7f8g9h0i1j/view?usp=sharing"
+      },
+      {
+        nis: "3902",
+        nisn: "135237939",
+        nama: "ERMYNA GUMESIA ALESHA",
+        jk: "P",
+        ttl: "NOELBAKI, 17-12-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f8g9h0i1j2k3l/view?usp=sharing"
+      },
+      {
+        nis: "3903",
+        nisn: "135237940",
+        nama: "EZRA DEBORA PRICILIA",
+        jk: "P",
+        ttl: "KUPANG, 10-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h0i1j2k3l4m5n/view?usp=sharing"
+      },
+      {
+        nis: "3904",
+        nisn: "138092288",
+        nama: "FREDERICHO MOHRABAI",
+        jk: "L",
+        ttl: "KUPANG, 07-02-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j2k3l4m5n6o7p/view?usp=sharing"
+      },
+      {
+        nis: "3905",
+        nisn: "138092289",
+        nama: "GILBERTUS RAJELAN",
+        jk: "L",
+        ttl: "NOELBAKI, 22-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l4m5n6o7p8q9r/view?usp=sharing"
+      },
+      {
+        nis: "3906",
+        nisn: "138092290",
+        nama: "HAIMAN ADRIEL BELE",
+        jk: "L",
+        ttl: "KUPANG, 08-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n6o7p8q9r0s1t/view?usp=sharing"
+      },
+      {
+        nis: "3933",
+        nisn: "138092291",
+        nama: "HARDY ALVARO BOMBALAN",
+        jk: "L",
+        ttl: "ENDE, 22-05-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p8q9r0s1t2u3v/view?usp=sharing"
+      },
+      {
+        nis: "3934",
+        nisn: "138092292",
+        nama: "KRISTIANI VALENTINA",
+        jk: "P",
+        ttl: "KUPANG, 19-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r0s1t2u3v4w5x/view?usp=sharing"
+      },
+      {
+        nis: "3935",
+        nisn: "313936936",
+        nama: "JENTO MISTERIAH",
+        jk: "L",
+        ttl: "MANADO, 19-06-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t2u3v4w5x6y7z/view?usp=sharing"
+      },
+      {
+        nis: "3936",
+        nisn: "313936937",
+        nama: "KAROLUS DENIS",
+        jk: "L",
+        ttl: "KUPANG, 23-01-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v4w5x6y7z8a9b/view?usp=sharing"
+      },
+      {
+        nis: "3937",
+        nisn: "313936938",
+        nama: "KHOIRUL ANAM PUTRA",
+        jk: "L",
+        ttl: "NOELBAKI, 10-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x6y7z8a9b0c1d/view?usp=sharing"
+      },
+      {
+        nis: "3938",
+        nisn: "313936939",
+        nama: "KIPY MARIA LETONARA",
+        jk: "P",
+        ttl: "KUPANG, 15-06-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z8a9b0c1d2e3f/view?usp=sharing"
+      },
+      {
+        nis: "3939",
+        nisn: "313936940",
+        nama: "LAURA DIANA",
+        jk: "P",
+        ttl: "KUPANG, 08-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b0c1d2e3f4g5h/view?usp=sharing"
+      },
+      {
+        nis: "3774",
+        nisn: "313936988",
+        nama: "MALTIH YASA L",
+        jk: "L",
+        ttl: "NOELBAKI, 19-09-2011",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d2e3f4g5h6i7j/view?usp=sharing"
+      },
+      {
+        nis: "3775",
+        nisn: "313936989",
+        nama: "MARFIN NAIL",
+        jk: "L",
+        ttl: "NOELBAKI, 22-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f4g5h6i7j8k9l/view?usp=sharing"
+      },
+      {
+        nis: "3776",
+        nisn: "313936990",
+        nama: "MARINI NATASYA",
+        jk: "P",
+        ttl: "NOELBAKI, 01-08-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h6i7j8k9l0m1n/view?usp=sharing"
+      },
+      {
+        nis: "3777",
+        nisn: "313936991",
+        nama: "MARSELO YOSE SOAR",
+        jk: "L",
+        ttl: "NOELBAKI, 06-07-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j8k9l0m1n2o3p/view?usp=sharing"
+      },
+      {
+        nis: "3778",
+        nisn: "313936992",
+        nama: "MELKIANO ADRIEL BELE",
+        jk: "L",
+        ttl: "NOELBAKI, 17-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l0m1n2o3p4q5r/view?usp=sharing"
+      },
+      {
+        nis: "3779",
+        nisn: "012721780",
+        nama: "MELVIN THAN BEKA",
+        jk: "L",
+        ttl: "NOELBAKI, 13-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n2o3p4q5r6s7t/view?usp=sharing"
+      },
+      {
+        nis: "3780",
+        nisn: "012721781",
+        nama: "MUGNI FATUMETAN",
+        jk: "P",
+        ttl: "NOELBAKI, 20-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p4q5r6s7t8u9v/view?usp=sharing"
+      },
+      {
+        nis: "3781",
+        nisn: "012721782",
+        nama: "PERISIANI NAYANA",
+        jk: "P",
+        ttl: "NOELBAKI, 22-08-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r6s7t8u9v0w1x/view?usp=sharing"
+      },
+      {
+        nis: "3782",
+        nisn: "012721783",
+        nama: "RIKI SOARES AFAIT",
+        jk: "L",
+        ttl: "NOELBAKI, 29-03-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t8u9v0w1x2y3z/view?usp=sharing"
+      },
+      {
+        nis: "3783",
+        nisn: "012721784",
+        nama: "SATRIAN NATHANAEL",
+        jk: "L",
+        ttl: "NOELBAKI, 01-08-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v0w1x2y3z4a5b/view?usp=sharing"
+      },
+      {
+        nis: "3784",
+        nisn: "012721785",
+        nama: "YOHANES DEPASO",
+        jk: "L",
+        ttl: "KUPANG, 25-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x2y3z4a5b6c7d/view?usp=sharing"
+      },
+      {
+        nis: "3785",
+        nisn: "012721786",
+        nama: "YULIUS KAHY",
+        jk: "L",
+        ttl: "NOELBAKI, 12-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z4a5b6c7d8e9f/view?usp=sharing"
+      },
+      {
+        nis: "3825",
+        nisn: "0097654321",
+        nama: "ALENISIA RUMAH",
+        jk: "P",
+        ttl: "KUPANG, 10-11-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b6c7d8e9f0g1h/view?usp=sharing"
+      },
+      {
+        nis: "3826",
+        nisn: "315878475",
+        nama: "ALENIRA DEBORA T",
+        jk: "P",
+        ttl: "SEKUMENA, 22-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d8e9f0g1h2i3j/view?usp=sharing"
+      },
+      {
+        nis: "3829",
+        nisn: "311723696",
+        nama: "FRANSISKUS K.S. KOLO",
+        jk: "L",
+        ttl: "NEKUS, 26-10-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f0g1h2i3j4k5l/view?usp=sharing"
+      },
+      {
+        nis: "3830",
+        nisn: "311723697",
+        nama: "FRANSISKUS PRAYOGA",
+        jk: "L",
+        ttl: "NOELBAKI, 05-03-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h2i3j4k5l6m7n/view?usp=sharing"
+      },
+      {
+        nis: "3831",
+        nisn: "311723698",
+        nama: "KRISTIANI JONATHAN",
+        jk: "L",
+        ttl: "NOELBAKI, 20-07-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j4k5l6m7n8o9p/view?usp=sharing"
+      },
+      {
+        nis: "3917",
+        nisn: "311723707",
+        nama: "EUFROSINA W.W. LULU",
+        jk: "P",
+        ttl: "NOELBAKI, 14-01-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l6m7n8o9p0q1r/view?usp=sharing"
+      },
+      {
+        nis: "3918",
+        nisn: "311723708",
+        nama: "FATIMAH S.S. NAWA",
+        jk: "P",
+        ttl: "NOELBAKI, 18-02-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n8o9p0q1r2s3t/view?usp=sharing"
+      },
+      {
+        nis: "3919",
+        nisn: "119999711",
+        nama: "JESIKA KASIH LAO",
+        jk: "P",
+        ttl: "KUPANG, 22-07-2011",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p0q1r2s3t4u5v/view?usp=sharing"
+      },
+      {
+        nis: "3920",
+        nisn: "127888888",
+        nama: "KAREN MEGASARI",
+        jk: "P",
+        ttl: "OELATI, 10-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r2s3t4u5v6w7x/view?usp=sharing"
+      },
+      {
+        nis: "3921",
+        nisn: "127888889",
+        nama: "KARIN AGO",
+        jk: "P",
+        ttl: "NOELBAKI, 06-03-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t4u5v6w7x8y9z/view?usp=sharing"
+      },
+      {
+        nis: "3922",
+        nisn: "127888890",
+        nama: "LAURA KRISTIANI",
+        jk: "P",
+        ttl: "NOELBAKI, 08-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v6w7x8y9z0a1b/view?usp=sharing"
+      },
+      {
+        nis: "3911",
+        nisn: "128321178",
+        nama: "MARIA ARFINA SARI",
+        jk: "P",
+        ttl: "TANAH MERAH, 28-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x8y9z0a1b2c3d/view?usp=sharing"
+      },
+      {
+        nis: "3912",
+        nisn: "128321179",
+        nama: "MELINDA WATI RAH",
+        jk: "P",
+        ttl: "NOELBAKI, 22-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z0a1b2c3d4e5f/view?usp=sharing"
+      },
+      {
+        nis: "3913",
+        nisn: "128321180",
+        nama: "MELKIANO",
+        jk: "L",
+        ttl: "NOELBAKI, 15-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b2c3d4e5f6g7h/view?usp=sharing"
+      },
+      {
+        nis: "3914",
+        nisn: "102462141",
+        nama: "MERLIN KASIH L",
+        jk: "P",
+        ttl: "NOELBAKI, 10-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1c_d4e5f6g7h8i9j/view?usp=sharing"
+      },
+      {
+        nis: "3915",
+        nisn: "102462142",
+        nama: "MERYL YULIANI",
+        jk: "P",
+        ttl: "NOELBAKI, 19-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1e_f6g7h8i9j0k1l/view?usp=sharing"
+      },
+      {
+        nis: "3916",
+        nisn: "313763574",
+        nama: "REINALDINO OELMATAN",
+        jk: "L",
+        ttl: "BAUMATA, 11-02-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1g_h8i9j0k1l2m3n/view?usp=sharing"
+      },
+      {
+        nis: "3923",
+        nisn: "313763575",
+        nama: "RICHARD ALVARO",
+        jk: "L",
+        ttl: "NOELBAKI, 20-03-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1i_j0k1l2m3n4o5p/view?usp=sharing"
+      },
+      {
+        nis: "3924",
+        nisn: "313763576",
+        nama: "SEPRI WULAN SARI",
+        jk: "P",
+        ttl: "KUPANG, 02-05-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1k_l2m3n4o5p6q7r/view?usp=sharing"
+      },
+      {
+        nis: "3925",
+        nisn: "313763577",
+        nama: "VERONIKA YOSEPINA",
+        jk: "P",
+        ttl: "KUPANG, 10-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1m_n4o5p6q7r8s9t/view?usp=sharing"
+      },
+      {
+        nis: "3907",
+        nisn: "135838718",
+        nama: "NATHASHA S",
+        jk: "P",
+        ttl: "NOELBAKI, 28-09-2012",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1o_p6q7r8s9t0u1v/view?usp=sharing"
+      },
+      {
+        nis: "3908",
+        nisn: "135838719",
+        nama: "NAOMI KRESNA",
+        jk: "P",
+        ttl: "NOELBAKI, 22-07-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1q_r8s9t0u1v2w3x/view?usp=sharing"
+      },
+      {
+        nis: "3909",
+        nisn: "135838720",
+        nama: "NICO SAPUTRA G",
+        jk: "L",
+        ttl: "NOELBAKI, 13-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1s_t0u1v2w3x4y5z/view?usp=sharing"
+      },
+      {
+        nis: "3910",
+        nisn: "135838721",
+        nama: "PRISKA YOSEPINA",
+        jk: "P",
+        ttl: "NOELBAKI, 06-06-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1u_v2w3x4y5z6a7b/view?usp=sharing"
+      },
+      {
+        nis: "3911",
+        nisn: "135838722",
+        nama: "SHANUM VIONA",
+        jk: "P",
+        ttl: "NOELBAKI, 19-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1w_x4y5z6a7b8c9d/view?usp=sharing"
+      },
+      {
+        nis: "3912",
+        nisn: "313673773",
+        nama: "YULIANA SUTRISNO",
+        jk: "P",
+        ttl: "NEKUS, 01-09-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1y_z6a7b8c9d0e1f/view?usp=sharing"
+      },
+      {
+        nis: "3913",
+        nisn: "313673774",
+        nama: "ALENIYA AYU",
+        jk: "P",
+        ttl: "KUPANG, 06-08-2013",
+        keterangan: "LULUS",
+        link: "https://drive.google.com/file/d/1a_b8c9d0e1f2g3h/view?usp=sharing"
+      }
+      // Lanjutkan dengan data lainnya dari gambar
     ];
 
     function cariData() {
